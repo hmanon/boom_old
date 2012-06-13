@@ -25,7 +25,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
-        <version>2.4.0</version>
+        <version>${gwtMavenPluginVersion}</version>
         <executions>
           <execution>
             <goals>
@@ -41,6 +41,9 @@
           <runTarget>Face.html</runTarget>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
           <i18nMessagesBundle>com.boom.face.client.Messages</i18nMessagesBundle>
+          <compileSourcesArtifacts>
+            <compileSourcesArtifact>com.boom.commons.client:commons-client</compileSourcesArtifact>
+          </compileSourcesArtifacts>
         </configuration>
       </plugin>
     </plugins>

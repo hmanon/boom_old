@@ -17,6 +17,7 @@
   <properties>
     <!-- Convenience property to set the GWT version -->
     <gwtVersion>2.4.0</gwtVersion>
+    <gwtMavenPluginVersion>2.4.0</gwtMavenPluginVersion>
     <!-- GWT needs at least java 1.5 -->
     <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
   </properties>
@@ -79,6 +80,19 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <version>${gwtMavenPluginVersion}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
     
